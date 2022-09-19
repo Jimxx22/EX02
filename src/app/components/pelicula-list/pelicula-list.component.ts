@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { PeliculaService } from "../../service/pelicula.service";
 
 @Component({
   selector: 'app-pelicula-list',
@@ -9,19 +10,22 @@ import { HttpClient } from "@angular/common/http";
 export class PeliculaListComponent implements OnInit {
 
   peliculas:any;
+  error:string = '';
 
-  constructor(private http: HttpClient) { }
+  constructor(private peliculaService: PeliculaService) { }
 
   ngOnInit(): void {
-    this.http.get("https://api.themoviedb.org/3/movie/550?api_key=772f2146252e87b49a85442c0c01214a")
+    this.peliculaService.getAll()
     .subscribe(
       result => {
         this.peliculas = result;
       },
       error => {
+        this.error = error;
         console.log('error');
       }
     );
+
   }
 
 }

@@ -1,1 +1,12 @@
-<p>pelicula-details works!</p>
+<div class="row mt-5">
+  <div class="col">
+    <div class="bg-img mx-auto" [ngStyle]="{'background': 'url(https://image.tmdb.org/t/p/w440_and_h660_face'+ currentPelicula.poster_path +')' }"></div>
+  </div>
+  <div class="col">
+    <h1>{{currentPelicula.title}}</h1>
+    <h3>Título original: {{currentPelicula.original_title}}</h3>
+    <p>Fecha de estreno: <b>{{currentPelicula.release_date}}</b></p>
+    <p>{{currentPelicula.overview}}</p>
+    <p>Votos: {{currentPelicula.vote_count}}</p>
+  </div>
+</div>
