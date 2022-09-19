@@ -6,22 +6,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://master.d27wdk1wh7hae.amplifyapp.com/
 
-## Code scaffolding
+This application is a search engine for movies and series. We can see that by clicking on the top menu in the Movies section, we will see a list of the most popular movies of the moment:  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To list the most popular movies we have used this endpoint:
+* https://api.themoviedb.org/3/movie/popular/[api-key]&language=es
 
-## Build
+![movies-list-image](https://github.com/Jimxx22/EX02/blob/master/img/1.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Also if we click on the Series section in the header, we will see the most popular series:
 
-## Running unit tests
+To list the most popular series we have used this endpoint:
+* https://api.themoviedb.org/3/tv/popular/[api-key]&language=es
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![series-list-image](https://github.com/Jimxx22/EX02/blob/master/img/2.png)
 
-## Running end-to-end tests
+In the list of movies or series we will see that each component has a 'See more' button, if we click on it we will enter to see the details of the movie or series.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To see the details of a movie or serie we used this endpoint:
+* https://api.themoviedb.org/3/movie/[id_movie]/[api-key]&language=es
 
-## Further help
+![component-of-list](https://github.com/Jimxx22/EX02/blob/master/img/3.png)
+![component-details](https://github.com/Jimxx22/EX02/blob/master/img/4.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+We can also see in the two sections that there is a search engine, here we can write the title of the movie or serie and it will filter us among all the movies or series.
+
+For the movie and series search engine we have used these endpoints respectively
+* https://api.themoviedb.org/3/search/movie/[api-key]&language=es&query=[term]
+* https://api.themoviedb.org/3/search/tv/[api-key]&language=es&query=[term]
+
+![search-list-movies](https://github.com/Jimxx22/EX02/blob/master/img/5.png)
+![search-list-series](https://github.com/Jimxx22/EX02/blob/master/img/6.png)
