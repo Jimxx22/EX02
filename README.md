@@ -30,7 +30,7 @@ To see the details of a movie or serie we used this endpoint:
 
 We can also see in the two sections that there is a search engine, here we can write the title of the movie or serie and it will filter us among all the movies or series.
 
-For the movie and series search engine we have used these endpoints respectively
+For the movie and series search engine we have used these endpoints respectively:
 * https://api.themoviedb.org/3/search/movie/[api-key]&language=es&query=[term]
 * https://api.themoviedb.org/3/search/tv/[api-key]&language=es&query=[term]
 
