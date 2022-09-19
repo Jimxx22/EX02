@@ -1,1 +1,16 @@
-<p>serie-list works!</p>
+<div class="mt-5" *ngIf="series !=null; else espera">
+  <h1>Series mas populares: </h1>
+  <div class="row mt-2">
+    <div class="col py-3" *ngFor="let serie of series.results">
+      <div class="card mx-auto">
+        <span class="bg-img" [ngStyle]="{'background': 'url(https://image.tmdb.org/t/p/w220_and_h330_face'+ serie.poster_path +')' }"></span>
+        <div class="card-body">
+          <h5 class="card-title">{{serie.name}}</h5>
+          <a href routerLink="/serie/{{ serie.id }}" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #espera>Esperando datos</ng-template>
+

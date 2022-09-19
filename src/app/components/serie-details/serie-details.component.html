@@ -1,1 +1,15 @@
-<p>serie-details works!</p>
+<div class="row mt-5">
+  <div class="col">
+    <div class="bg-img mx-auto" [ngStyle]="{'background': 'url(https://image.tmdb.org/t/p/w440_and_h660_face'+ currentSerie.poster_path +')' }"></div>
+  </div>
+  <div class="col">
+    <h1>{{currentSerie.name}}</h1>
+    <h3>Título original: {{currentSerie.original_name}}</h3>
+    <p>Fecha de estreno: <b>{{currentSerie.first_air_date}}</b></p>
+    <p>Genero: <b><span *ngFor="let genre of currentSerie.genres">{{genre.name}}, </span></b></p>
+
+    <p>{{currentSerie.overview}}</p>
+    <p>Votos: {{currentSerie.vote_count}}</p>
+  </div>
+</div>
+

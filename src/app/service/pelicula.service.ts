@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 const baseURL = 'https://api.themoviedb.org/3/movie';
-const apiKEY = '?api_key=772f2146252e87b49a85442c0c01214a';
+const apiKEY = '?api_key=772f2146252e87b49a85442c0c01214a&language=es';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,6 @@ export class PeliculaService {
 
   getAll():Observable<Pelicula[]>{
     let url = baseURL+"/popular"+apiKEY;
-    console.log(url);
     return this.http.get<Pelicula[]>(url);
 
   }

@@ -6,6 +6,8 @@
     <h1>{{currentPelicula.title}}</h1>
     <h3>Título original: {{currentPelicula.original_title}}</h3>
     <p>Fecha de estreno: <b>{{currentPelicula.release_date}}</b></p>
+    <p> Genero: <b><span *ngFor="let genre of currentPelicula.genres">{{genre.name}}, </span></b></p>
+
     <p>{{currentPelicula.overview}}</p>
     <p>Votos: {{currentPelicula.vote_count}}</p>
   </div>

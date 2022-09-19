@@ -9,4 +9,5 @@ export class Pelicula {
   vote_average?:any;
   vote_count?:any;
   adult?:any;
+  genres?:any;
 }
