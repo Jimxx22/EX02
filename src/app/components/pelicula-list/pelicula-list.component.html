@@ -1,5 +1,15 @@
 <div class="mt-5" *ngIf="peliculas !=null; else espera">
-  <h1>Peliculas mas populares</h1>
+  <div class="row">
+    <div class="col">
+      <h1>{{titulo}}</h1>
+    </div>
+    <div class="col">
+      <form class="d-flex align-middle">
+        <input class="form-control me-2" placeholder="Search" aria-label="Search" name="term" #term>
+        <a routerLink="/peliculas/{{term.value}}" class="btn btn-outline-success">Search</a>
+      </form>
+    </div>
+  </div>
   <div class="row mt-2">
     <div class="col py-3" *ngFor="let pel of peliculas.results">
       <div class="card mx-auto">
